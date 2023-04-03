@@ -22,3 +22,10 @@ steps:
     orchestratorConnection: 'CI plugins connection'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Information'
+
+- task: UiPathDeploy@3
+  inputs:
+    orchestratorConnection: 'CI plugins connection'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'Pipelines'
+    traceLevel: 'Information'
