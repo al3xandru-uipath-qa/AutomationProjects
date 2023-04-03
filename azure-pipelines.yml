@@ -19,13 +19,13 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: 'VoidProject'
-    orchestratorConnection: 'CI plugins connection'
+    orchestratorConnection: 'CI plugins connection | ext app'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Information'
 
 - task: UiPathDeploy@3
   inputs:
-    orchestratorConnection: 'CI plugins connection'
+    orchestratorConnection: 'CI plugins connection | ext app'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: 'Pipelines'
     traceLevel: 'Information'
