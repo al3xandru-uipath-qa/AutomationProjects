@@ -4,6 +4,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[22.4.4]",
+    "UiPath.Testing.Activities": "[23.6.0-alpha.3687008]",
     "UiPath.UIAutomation.Activities": "[22.4.7]",
     "UiPath.WebAPI.Activities": "[1.11.1]"
   },
@@ -11,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.4.4.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.2",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -38,7 +39,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "493b90b1-491c-486f-9ec2-35e0f23522d5",
+        "testCaseType": "TestCase",
+        "fileName": "MyTestCase.xaml"
+      }
+    ],
     "modernBehavior": true
   },
   "expressionLanguage": "CSharp",
