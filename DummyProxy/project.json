@@ -1,11 +1,12 @@
 {
-  "name": "BasicIf",
-  "description": "Has test cases",
+  "name": "DummyProxy",
+  "description": "Windows + C#",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Excel.Activities": "[2.12.3]",
+    "UiPath.Mail.Activities": "[1.15.2]",
     "UiPath.System.Activities": "[22.4.4]",
-    "UiPath.UIAutomation.Activities": "[22.4.7]",
-    "UiPath.WebAPI.Activities": "[1.11.1]"
+    "UiPath.UIAutomation.Activities": "[22.4.7]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -17,7 +18,7 @@
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": false,
+    "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
@@ -38,21 +39,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "493b90b1-491c-486f-9ec2-35e0f23522d5",
-        "testCaseType": "TestCase",
-        "fileName": "MyTestCase.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "modernBehavior": true
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "3cc12d7f-fed6-4652-8074-8e98c76fab2b",
+      "uniqueId": "27048d4f-0567-423e-9a38-e94e59a87648",
       "input": [],
       "output": []
     }
@@ -60,5 +54,5 @@
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
-  "targetFramework": "Portable"
+  "targetFramework": "Windows"
 }
