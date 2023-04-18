@@ -28,10 +28,7 @@ steps:
   inputs:
     testTarget: 'TestProject'
     orchestratorConnection: 'CI Plugins connection'
-    testProjectPath: 'VoidProject\project.json'
     folderName: 'Pipelines'
-    traceLevel: 'Information'
-    attachRobotLogs: true
 
 - task: UiPathDeploy@3
   inputs:
