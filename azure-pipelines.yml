@@ -29,7 +29,8 @@ steps:
 
 - task: UiPathTest@3
   inputs:
-    testTarget: 'VoidProject\project.json'
+    testTarget: 'TestProject'
+    testProjectPath: 'VoidProject\project.json'
     orchestratorConnection: 'CI Plugins connection'
     folderName: 'Pipelines'
 
