@@ -47,5 +47,4 @@ steps:
     orchestratorConnection: 'CI Plugins connection'
     processName: 'VoidProject_Main.xaml'
     folderName: '$(folderName)'
-    jobType: 'TestAutomation'
     traceLevel: 'Information'
