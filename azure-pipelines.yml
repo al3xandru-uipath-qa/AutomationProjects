@@ -41,3 +41,10 @@ steps:
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
     folderName: $(folderName)
     traceLevel: 'Information'
+
+- task: UiPathRunJob@3
+  inputs:
+    orchestratorConnection: 'CI Plugins connection'
+    processName: 'VoidProject_Main.xaml'
+    folderName: '$(folderName)'
+    traceLevel: 'Information'
