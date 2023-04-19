@@ -42,9 +42,28 @@ steps:
     folderName: $(folderName)
     traceLevel: 'Information'
 
-- task: UiPathRunJob@3
+# - task: UiPathRunJob@3
+#   inputs:
+#     orchestratorConnection: 'CI Plugins connection'
+#     processName: 'VoidProject_Main.xaml'
+#     folderName: '$(folderName)'
+#     traceLevel: 'Information'
+
+- task: UiPathAssets@3
+  displayName: deploy assets
   inputs:
     orchestratorConnection: 'CI Plugins connection'
-    processName: 'VoidProject_Main.xaml'
-    folderName: '$(folderName)'
+    folderName: 'al3xFolder'
+    assetActionType: 'Deploy'
+    csvFile: 'VoidProject\assets_deploy.csv'
+    traceLevel: 'Information'
+
+
+- task: UiPathAssets@3
+  displayName: delete assets
+  inputs:
+    orchestratorConnection: 'CI Plugins connection'
+    folderName: 'al3xFolder'
+    assetActionType: 'Delete'
+    csvFile: 'VoidProject\assets_deploy.csv'
     traceLevel: 'Information'
