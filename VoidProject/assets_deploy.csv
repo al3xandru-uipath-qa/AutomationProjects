@@ -1,4 +1,4 @@
 ﻿name,type,value,description
 first_asset,text,hey there!,
 second_asset,integer,443,
-third_asset,text,asdf,
+third_asset,boolean,FALSE,
