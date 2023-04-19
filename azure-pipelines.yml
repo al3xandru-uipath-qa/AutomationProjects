@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: windows-latest
 
+variables:
+  folderName: 'al3xFolder'
+
 steps:
 - task: UiPathInstallPlatform@3
   inputs:
@@ -30,11 +33,11 @@ steps:
     testTarget: 'TestProject'
     testProjectPath: 'VoidProject\project.json'
     orchestratorConnection: 'CI Plugins connection'
-    folderName: 'Pipelines'
+    folderName: $(folderName)
 
 - task: UiPathDeploy@3
   inputs:
     orchestratorConnection: 'CI Plugins connection'
     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: 'Pipelines'
+    folderName: $(folderName)
     traceLevel: 'Information'
