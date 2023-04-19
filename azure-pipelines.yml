@@ -17,30 +17,30 @@ steps:
   inputs:
     cliVersion: 'WIN_22.10.8438.32859'
 
-- task: UiPathPack@3
-  inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: 'VoidProject\project.json'
-    orchestratorConnection: 'CI Plugins connection'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    traceLevel: 'Information'
+# - task: UiPathPack@3
+#   inputs:
+#     versionType: 'AutoVersion'
+#     projectJsonPath: 'VoidProject\project.json'
+#     orchestratorConnection: 'CI Plugins connection'
+#     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+#     traceLevel: 'Information'
 
-- script: ls
-  displayName: 'list files in working dir'
+# - script: ls
+#   displayName: 'list files in working dir'
 
-- task: UiPathTest@3
-  inputs:
-    testTarget: 'TestProject'
-    testProjectPath: 'VoidProject\project.json'
-    orchestratorConnection: 'CI Plugins connection'
-    folderName: $(folderName)
+# - task: UiPathTest@3
+#   inputs:
+#     testTarget: 'TestProject'
+#     testProjectPath: 'VoidProject\project.json'
+#     orchestratorConnection: 'CI Plugins connection'
+#     folderName: $(folderName)
 
-- task: UiPathDeploy@3
-  inputs:
-    orchestratorConnection: 'CI Plugins connection'
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: $(folderName)
-    traceLevel: 'Information'
+# - task: UiPathDeploy@3
+#   inputs:
+#     orchestratorConnection: 'CI Plugins connection'
+#     packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+#     folderName: $(folderName)
+#     traceLevel: 'Information'
 
 # - task: UiPathRunJob@3
 #   inputs:
@@ -65,5 +65,5 @@ steps:
     orchestratorConnection: 'CI Plugins connection'
     folderName: 'al3xFolder'
     assetActionType: 'Delete'
-    csvFile: 'VoidProject\assets_deploy.csv'
+    csvFile: 'VoidProject\assets_delete.csv'
     traceLevel: 'Information'
