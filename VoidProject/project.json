@@ -19,6 +19,7 @@
     "isAttended": false,
     "requiresUserInteraction": false,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -26,7 +27,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -38,15 +40,12 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "Publishable",
-        "testCaseId": "de999293-4a2f-46c9-aeae-a8f2d0353834",
-        "testCaseType": "TestCase",
-        "fileName": "MyTest.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "modernBehavior": true
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
